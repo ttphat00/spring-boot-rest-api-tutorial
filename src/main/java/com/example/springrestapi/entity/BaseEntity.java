@@ -13,9 +13,16 @@ public abstract class BaseEntity {
 //    private UUID vendorId;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
-    public Long getId() {
+    public BaseEntity() {
+    }
+
+    public BaseEntity(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getId() {
         return id;
     }
 }

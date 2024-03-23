@@ -16,10 +16,10 @@ spring:
 #      hibernate:
 #        dialect: org.hibernate.dialect.MySQL8Dialect
 
-  security:
-    user:
-      name: phat
-      password: 12345
+#  security:
+#    user:
+#      name: phat
+#      password: 12345
 
 management:
   endpoints:

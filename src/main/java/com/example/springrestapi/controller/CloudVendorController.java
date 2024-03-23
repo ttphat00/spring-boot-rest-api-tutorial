@@ -42,7 +42,7 @@ public class CloudVendorController {
 
     @GetMapping("/{id}")
 //    @ApiOperation(value = "Cloud Vendor ID", notes = "Provide cloud vendor details", response = ResponseEntity.class)
-    public ResponseEntity<Object> getOneById(@PathVariable("id") long id){
+    public ResponseEntity<Object> getOneById(@PathVariable("id") int id){
         return ResponseHandler.responseBuilder(
                 "Requested Vendor Details are given here",
                 HttpStatus.OK,
@@ -60,7 +60,7 @@ public class CloudVendorController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Object> update(@PathVariable("id") long id, @RequestBody CloudVendorDTO cloudVendorDTO){
+    public ResponseEntity<Object> update(@PathVariable("id") int id, @RequestBody CloudVendorDTO cloudVendorDTO){
         return ResponseHandler.responseBuilder(
                 "Updated successfully",
                 HttpStatus.OK,
@@ -69,7 +69,7 @@ public class CloudVendorController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<Object> delete(@PathVariable("id") long id){
+    public ResponseEntity<Object> delete(@PathVariable("id") int id){
         cloudVendorService.delete(id);
         return ResponseHandler.responseBuilder(
                 "Deleted successfully",

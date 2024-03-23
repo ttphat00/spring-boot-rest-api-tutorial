@@ -5,13 +5,20 @@ package com.example.springrestapi.dto;
 public abstract class BaseDTO {
 
 //    @ApiModelProperty(notes = "This is a Cloud Vendor ID")
-    private Long id;
+    private Integer id;
 
-    public Long getId() {
+    public BaseDTO() {
+    }
+
+    public BaseDTO(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 }

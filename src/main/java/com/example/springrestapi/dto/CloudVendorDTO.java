@@ -8,6 +8,22 @@ public class CloudVendorDTO extends BaseDTO {
     private String vendorAddress;
     private String vendorPhoneNumber;
 
+    public CloudVendorDTO() {
+    }
+
+    public CloudVendorDTO(String vendorName, String vendorAddress, String vendorPhoneNumber) {
+        this.vendorName = vendorName;
+        this.vendorAddress = vendorAddress;
+        this.vendorPhoneNumber = vendorPhoneNumber;
+    }
+
+    public CloudVendorDTO(Integer id, String vendorName, String vendorAddress, String vendorPhoneNumber) {
+        super(id);
+        this.vendorName = vendorName;
+        this.vendorAddress = vendorAddress;
+        this.vendorPhoneNumber = vendorPhoneNumber;
+    }
+
     public String getVendorName() {
         return vendorName;
     }

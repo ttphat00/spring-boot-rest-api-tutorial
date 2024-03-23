@@ -24,6 +24,13 @@ public class CloudVendorEntity extends BaseEntity {
         this.vendorPhoneNumber = vendorPhoneNumber;
     }
 
+    public CloudVendorEntity(Integer id, String vendorName, String vendorAddress, String vendorPhoneNumber) {
+        super(id);
+        this.vendorName = vendorName;
+        this.vendorAddress = vendorAddress;
+        this.vendorPhoneNumber = vendorPhoneNumber;
+    }
+
     public String getVendorName() {
         return vendorName;
     }
